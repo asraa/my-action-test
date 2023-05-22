@@ -1,0 +1,10 @@
+on: workflow_dispatch
+
+jobs:
+  scorecard:
+    permissions:
+      id-token: write # For signing.
+      contents: write # For asset uploads.
+      actions: read # For getting workflow run
+    # Run the reusable workflow that calls the BYO attestor
+    uses: asraa/my-action/.github/workflows/scorecard_slsa3.yml@main
