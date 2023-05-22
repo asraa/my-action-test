@@ -1,0 +1,7 @@
+on: workflow_dispatch
+
+jobs:
+  scorecard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: asraa/my-action@main
